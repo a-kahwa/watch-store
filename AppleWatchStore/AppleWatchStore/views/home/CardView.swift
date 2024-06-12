@@ -34,8 +34,11 @@ struct CardView: View {
                                 .condensedLowercased(.medium, size: 24)
                                 .foregroundStyle(.white)
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(.borderedBlack)
                     }
+                    .foregroundStyle(.primary)
+                    .padding(.horizontal)
+                    .padding(.bottom)
                 }
             }
         }

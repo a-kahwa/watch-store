@@ -17,6 +17,8 @@
 		8E13BD762C1878BB00FC1DF3 /* Collection+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD752C1878BB00FC1DF3 /* Collection+extension.swift */; };
 		8E13BD782C187DCF00FC1DF3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD772C187DCF00FC1DF3 /* CardView.swift */; };
 		8E13BD7A2C187E2900FC1DF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD792C187E2900FC1DF3 /* Constants.swift */; };
+		8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */; };
+		8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		8E13BD752C1878BB00FC1DF3 /* Collection+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+extension.swift"; path = "../../../../../../Pictures/Collection+extension.swift"; sourceTree = "<group>"; };
 		8E13BD772C187DCF00FC1DF3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8E13BD792C187E2900FC1DF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				8E13BD732C18768100FC1DF3 /* SectionHeader.swift */,
 				8E13BD752C1878BB00FC1DF3 /* Collection+extension.swift */,
 				8E13BD792C187E2900FC1DF3 /* Constants.swift */,
+				8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */,
+				8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 			files = (
 				8E13BD742C18768100FC1DF3 /* SectionHeader.swift in Sources */,
 				8E13BD702C18756500FC1DF3 /* ScaledFont.swift in Sources */,
+				8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */,
+				8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */,
 				8E13BD5D2C17643500FC1DF3 /* ContentView.swift in Sources */,
 				8E13BD762C1878BB00FC1DF3 /* Collection+extension.swift in Sources */,
 				8E13BD7A2C187E2900FC1DF3 /* Constants.swift in Sources */,
