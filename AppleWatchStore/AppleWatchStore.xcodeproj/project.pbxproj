@@ -19,6 +19,7 @@
 		8E13BD7A2C187E2900FC1DF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD792C187E2900FC1DF3 /* Constants.swift */; };
 		8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */; };
 		8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */; };
+		8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		8E13BD792C187E2900FC1DF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Extension.swift"; sourceTree = "<group>"; };
+		8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		8E13BD6E2C18742C00FC1DF3 /* supporting_views */ = {
 			isa = PBXGroup;
 			children = (
+				8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */,
 			);
 			path = supporting_views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E13BD742C18768100FC1DF3 /* SectionHeader.swift in Sources */,
+				8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */,
 				8E13BD702C18756500FC1DF3 /* ScaledFont.swift in Sources */,
 				8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */,
 				8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */,
