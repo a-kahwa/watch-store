@@ -26,6 +26,10 @@
 		8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F52C208FFB008E9682 /* CategoryListItem.swift */; };
 		8E89E6F82C20929E008E9682 /* CategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F72C20929E008E9682 /* CategorySection.swift */; };
 		8E89E6FA2C2094A7008E9682 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F92C2094A7008E9682 /* HomeView.swift */; };
+		8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6FE2C209DB0008E9682 /* ProductsView.swift */; };
+		8E89E7012C209DEA008E9682 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7002C209DEA008E9682 /* CartView.swift */; };
+		8E89E7032C209E1C008E9682 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7022C209E1C008E9682 /* FavoritesView.swift */; };
+		8E89E7082C20A024008E9682 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7072C20A024008E9682 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		8E89E6F52C208FFB008E9682 /* CategoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListItem.swift; sourceTree = "<group>"; };
 		8E89E6F72C20929E008E9682 /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
 		8E89E6F92C2094A7008E9682 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8E89E6FE2C209DB0008E9682 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		8E89E7002C209DEA008E9682 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		8E89E7022C209E1C008E9682 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		8E89E7072C20A024008E9682 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 		8E13BD682C1872D300FC1DF3 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8E89E7072C20A024008E9682 /* Theme.swift */,
 				8E13BD6F2C18756500FC1DF3 /* ScaledFont.swift */,
 				8E13BD732C18768100FC1DF3 /* SectionHeader.swift */,
 				8E13BD752C1878BB00FC1DF3 /* Collection+extension.swift */,
@@ -125,20 +134,23 @@
 		8E13BD6C2C1873E200FC1DF3 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				8E13BD6D2C18740400FC1DF3 /* home */,
+				8E13BD6D2C18740400FC1DF3 /* Home */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		8E13BD6D2C18740400FC1DF3 /* home */ = {
+		8E13BD6D2C18740400FC1DF3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8E89E6FD2C209D73008E9682 /* Favorites */,
+				8E89E6FC2C209D57008E9682 /* Cart */,
+				8E89E6FB2C209D3E008E9682 /* Products */,
 				8E13BD6E2C18742C00FC1DF3 /* supporting_views */,
 				8E13BD772C187DCF00FC1DF3 /* CardView.swift */,
 				8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */,
 				8E89E6F92C2094A7008E9682 /* HomeView.swift */,
 			);
-			path = home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8E13BD6E2C18742C00FC1DF3 /* supporting_views */ = {
@@ -150,6 +162,54 @@
 				8E89E6F72C20929E008E9682 /* CategorySection.swift */,
 			);
 			path = supporting_views;
+			sourceTree = "<group>";
+		};
+		8E89E6FB2C209D3E008E9682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E89E7062C209EA6008E9682 /* Supporting_Views */,
+				8E89E6FE2C209DB0008E9682 /* ProductsView.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		8E89E6FC2C209D57008E9682 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				8E89E7052C209E96008E9682 /* Supporting_Views */,
+				8E89E7002C209DEA008E9682 /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		8E89E6FD2C209D73008E9682 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				8E89E7042C209E84008E9682 /* Supporting_Views */,
+				8E89E7022C209E1C008E9682 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		8E89E7042C209E84008E9682 /* Supporting_Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supporting_Views;
+			sourceTree = "<group>";
+		};
+		8E89E7052C209E96008E9682 /* Supporting_Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supporting_Views;
+			sourceTree = "<group>";
+		};
+		8E89E7062C209EA6008E9682 /* Supporting_Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supporting_Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E89E7012C209DEA008E9682 /* CartView.swift in Sources */,
 				8E13BD742C18768100FC1DF3 /* SectionHeader.swift in Sources */,
 				8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */,
 				8E89E6F82C20929E008E9682 /* CategorySection.swift in Sources */,
@@ -235,10 +296,13 @@
 				8E13BD762C1878BB00FC1DF3 /* Collection+extension.swift in Sources */,
 				8E13BD7A2C187E2900FC1DF3 /* Constants.swift in Sources */,
 				8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */,
+				8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */,
 				8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */,
 				8E89E6FA2C2094A7008E9682 /* HomeView.swift in Sources */,
 				8E13BD782C187DCF00FC1DF3 /* CardView.swift in Sources */,
+				8E89E7082C20A024008E9682 /* Theme.swift in Sources */,
 				8E13BD5B2C17643500FC1DF3 /* AppleWatchStoreApp.swift in Sources */,
+				8E89E7032C209E1C008E9682 /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
