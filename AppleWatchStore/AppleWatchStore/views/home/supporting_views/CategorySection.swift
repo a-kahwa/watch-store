@@ -1,5 +1,5 @@
 //
-//  Category_Section.swift
+//  CategorySection.swift
 //  AppleWatchStore
 //
 //  Created by Arthur Nsereko Kahwa on 6/17/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Category_Section: View {
+struct CategorySection: View {
     var body: some View {
         VStack(spacing: 20) {
             SectionHeader(title: "Watch Accessories")
@@ -15,7 +15,7 @@ struct Category_Section: View {
             
             VStack {
                 ForEach(0 ..< 5) { item in
-                    Category_List_Item()
+                    CategoryListItem()
                 }
             }
         }
@@ -23,5 +23,5 @@ struct Category_Section: View {
 }
 
 #Preview {
-    Category_Section()
+    CategorySection()
 }

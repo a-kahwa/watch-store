@@ -1,5 +1,5 @@
 //
-//  Category_List_Item.swift
+//  CategoryListItem.swift
 //  AppleWatchStore
 //
 //  Created by Arthur Nsereko Kahwa on 6/17/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Category_List_Item: View {
+struct CategoryListItem: View {
     var body: some View {
         VStack (spacing: 4) {
             HStack {
@@ -32,5 +32,5 @@ struct Category_List_Item: View {
 }
 
 #Preview {
-    Category_List_Item()
+    CategoryListItem()
 }
