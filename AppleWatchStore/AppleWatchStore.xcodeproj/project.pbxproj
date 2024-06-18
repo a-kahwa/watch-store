@@ -30,6 +30,7 @@
 		8E89E7012C209DEA008E9682 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7002C209DEA008E9682 /* CartView.swift */; };
 		8E89E7032C209E1C008E9682 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7022C209E1C008E9682 /* FavoritesView.swift */; };
 		8E89E7082C20A024008E9682 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7072C20A024008E9682 /* Theme.swift */; };
+		8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		8E89E7002C209DEA008E9682 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8E89E7022C209E1C008E9682 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		8E89E7072C20A024008E9682 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				8E89E7062C209EA6008E9682 /* Supporting_Views */,
 				8E89E6FE2C209DB0008E9682 /* ProductsView.swift */,
+				8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				8E13BD7A2C187E2900FC1DF3 /* Constants.swift in Sources */,
 				8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */,
 				8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */,
+				8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */,
 				8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */,
 				8E89E6FA2C2094A7008E9682 /* HomeView.swift in Sources */,
 				8E13BD782C187DCF00FC1DF3 /* CardView.swift in Sources */,
