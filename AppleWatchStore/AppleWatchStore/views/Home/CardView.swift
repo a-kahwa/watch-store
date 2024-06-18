@@ -34,7 +34,7 @@ struct CardView: View {
                                 .condensedLowercased(.medium, size: 24)
                                 .foregroundStyle(.white)
                         }
-                        .buttonStyle(.borderedBlack)
+                        .buttonStyle(.customBorderedBlack)
                     }
                     .foregroundStyle(.primary)
                     .padding(.horizontal)

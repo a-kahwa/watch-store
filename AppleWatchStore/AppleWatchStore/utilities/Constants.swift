@@ -14,6 +14,11 @@ enum Constants {
         .init(color: Color(.baseGradientBottom), location: 0.5)
     ])
     
+    static let filterColumns = [
+        GridItem(.adaptive(minimum: 120)),
+        GridItem(.adaptive(minimum: 120))
+    ]
+    
     static let columns = [
         GridItem(.flexible(minimum: 100, maximum: .infinity)),
         GridItem(.flexible(minimum: 100, maximum: .infinity))
