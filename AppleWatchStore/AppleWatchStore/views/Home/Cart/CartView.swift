@@ -108,7 +108,7 @@ struct CartView: View {
                 .buttonStyle(.customBorderedBlack)
                 
                 Text("88")
-                    .condensed(.heavy, size: 32)
+                    .condensed(.heavy, size: 40)
                 
                 Button(action: {}, label: {
                     Image(systemName: "plus")
@@ -125,7 +125,49 @@ struct CartView: View {
     }
     
     var cartTotals: some View {
-        Text("Cart Totals")
+        ZStack {
+            Rectangle()
+                .fill(Color.white.opacity(0.2))
+                .frame(height: 200)
+                .background(
+                    .regularMaterial, in: Rectangle()
+                )
+            
+            VStack {
+                HStack {
+                    Text("Subtotal")
+                        .condensed(.bold, size: 20)
+                    
+                    Spacer()
+                    
+                    Text("€").bold() + Text("888,88").bold(size: 20)
+                }
+                
+                HStack {
+                    Text("Tax")
+                        .condensed(.bold, size: 20)
+                    
+                    Spacer()
+                    
+                    Text("€").bold() + Text("888,88").bold(size: 20)
+                }
+                
+                Divider()
+                
+                VStack {
+                    HStack {
+                        Text("Total")
+                            .condensed(.black, size: 24)
+                        
+                        Spacer()
+                        
+                        Text("€").ultraLight(size: 20) + Text("888,88").bold(size: 48)
+                    }
+                }
+            }
+            .padding()
+        }
+        .frame(height: 200)
     }
 }
 
