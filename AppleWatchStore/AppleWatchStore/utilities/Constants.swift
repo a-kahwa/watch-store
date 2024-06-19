@@ -23,4 +23,12 @@ enum Constants {
         GridItem(.flexible(minimum: 100, maximum: .infinity)),
         GridItem(.flexible(minimum: 100, maximum: .infinity))
     ]
+    
+    static var heart: some View {
+        Image(systemName: "heart")
+            .symbolVariant(.none)
+            .font(.system(size: 24))
+            .padding(.trailing, 20)
+            .padding(.top, 10)
+    }
 }

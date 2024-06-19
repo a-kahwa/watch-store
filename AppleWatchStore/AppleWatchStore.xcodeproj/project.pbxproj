@@ -33,6 +33,7 @@
 		8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */; };
 		8E89E70C2C21E3F0008E9682 /* ProductFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */; };
 		8E89E70E2C21E448008E9682 /* ProductFilterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */; };
+		8E89E7102C230BE2008E9682 /* WideProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70F2C230BE2008E9682 /* WideProductItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsGridView.swift; sourceTree = "<group>"; };
 		8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterView.swift; sourceTree = "<group>"; };
 		8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterSectionView.swift; sourceTree = "<group>"; };
+		8E89E70F2C230BE2008E9682 /* WideProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideProductItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */,
 				8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */,
+				8E89E70F2C230BE2008E9682 /* WideProductItem.swift */,
 			);
 			path = Supporting_Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */,
 				8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */,
 				8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */,
+				8E89E7102C230BE2008E9682 /* WideProductItem.swift in Sources */,
 				8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */,
 				8E89E6FA2C2094A7008E9682 /* HomeView.swift in Sources */,
 				8E13BD782C187DCF00FC1DF3 /* CardView.swift in Sources */,
