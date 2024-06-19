@@ -12,11 +12,11 @@ struct GridProductItem: View {
         ZStack(alignment: .bottom) {
             VStack {
                 ZStack {
-                    Image(.sportBandProductRedL)
+                    Image(.sportBandProductRedLarge)
                         .resizable()
                         .frame(width: 250, height: 250)
                     
-                    Image(.aluminumMidnightL)
+                    Image(.aluminumMidnightLarge)
                         .resizable()
                         .frame(width: 250, height: 250)
                 }
