@@ -25,6 +25,7 @@ struct ConnectivityView: View {
                 }
             }
         }
+        .padding(.horizontal)
     }
 }
 

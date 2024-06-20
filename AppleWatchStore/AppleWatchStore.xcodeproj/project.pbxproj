@@ -28,6 +28,7 @@
 		8E69E3742C247C500008B662 /* WifiCellularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3732C247C500008B662 /* WifiCellularView.swift */; };
 		8E69E3762C247D9A0008B662 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3752C247D9A0008B662 /* ConnectivityView.swift */; };
 		8E69E3782C2480A80008B662 /* AppleCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3772C2480A80008B662 /* AppleCareView.swift */; };
+		8E69E37A2C2492430008B662 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3792C2492430008B662 /* ProductDetailView.swift */; };
 		8E89E6F02C1B4952008E9682 /* GridProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */; };
 		8E89E6F22C1B5076008E9682 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F12C1B5076008E9682 /* Text+Extension.swift */; };
 		8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F32C1B550C008E9682 /* PopularSection.swift */; };
@@ -67,6 +68,7 @@
 		8E69E3732C247C500008B662 /* WifiCellularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiCellularView.swift; sourceTree = "<group>"; };
 		8E69E3752C247D9A0008B662 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		8E69E3772C2480A80008B662 /* AppleCareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleCareView.swift; sourceTree = "<group>"; };
+		8E69E3792C2492430008B662 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProductItem.swift; sourceTree = "<group>"; };
 		8E89E6F12C1B5076008E9682 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		8E89E6F32C1B550C008E9682 /* PopularSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSection.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				8E89E72C2C245C5C008E9682 /* SupportingViews */,
+				8E69E3792C2492430008B662 /* ProductDetailView.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				8E89E7012C209DEA008E9682 /* CartView.swift in Sources */,
 				8E69E3702C2477AC0008B662 /* WristItemView.swift in Sources */,
+				8E69E37A2C2492430008B662 /* ProductDetailView.swift in Sources */,
 				8E69E36C2C246E450008B662 /* CaseSizesView.swift in Sources */,
 				8E89E70E2C21E448008E9682 /* ProductFilterSectionView.swift in Sources */,
 				8E13BD742C18768100FC1DF3 /* SectionHeader.swift in Sources */,
