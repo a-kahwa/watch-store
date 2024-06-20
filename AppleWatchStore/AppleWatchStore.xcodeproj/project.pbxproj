@@ -33,6 +33,7 @@
 		8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */; };
 		8E89E70C2C21E3F0008E9682 /* ProductFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */; };
 		8E89E70E2C21E448008E9682 /* ProductFilterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */; };
+		8E89E7102C230BE2008E9682 /* WideProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E70F2C230BE2008E9682 /* WideProductItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsGridView.swift; sourceTree = "<group>"; };
 		8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterView.swift; sourceTree = "<group>"; };
 		8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterSectionView.swift; sourceTree = "<group>"; };
+		8E89E70F2C230BE2008E9682 /* WideProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideProductItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,9 @@
 		8E13BD592C17643500FC1DF3 /* AppleWatchStore */ = {
 			isa = PBXGroup;
 			children = (
-				8E13BD6C2C1873E200FC1DF3 /* views */,
-				8E13BD692C18730A00FC1DF3 /* app */,
-				8E13BD682C1872D300FC1DF3 /* utilities */,
+				8E13BD6C2C1873E200FC1DF3 /* Views */,
+				8E13BD692C18730A00FC1DF3 /* App */,
+				8E13BD682C1872D300FC1DF3 /* Utilities */,
 				8E13BD602C17643600FC1DF3 /* Preview Content */,
 			);
 			path = AppleWatchStore;
@@ -111,7 +113,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8E13BD682C1872D300FC1DF3 /* utilities */ = {
+		8E13BD682C1872D300FC1DF3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				8E89E7072C20A024008E9682 /* Theme.swift */,
@@ -123,10 +125,10 @@
 				8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */,
 				8E89E6F12C1B5076008E9682 /* Text+Extension.swift */,
 			);
-			path = utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		8E13BD692C18730A00FC1DF3 /* app */ = {
+		8E13BD692C18730A00FC1DF3 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				8E13BD5A2C17643500FC1DF3 /* AppleWatchStoreApp.swift */,
@@ -134,15 +136,16 @@
 				8E13BD5E2C17643600FC1DF3 /* Assets.xcassets */,
 				8E13BD6A2C1873C900FC1DF3 /* theme.xcassets */,
 			);
-			path = app;
+			path = App;
 			sourceTree = "<group>";
 		};
-		8E13BD6C2C1873E200FC1DF3 /* views */ = {
+		8E13BD6C2C1873E200FC1DF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E89E72B2C245C4B008E9682 /* ProductDetail */,
 				8E13BD6D2C18740400FC1DF3 /* Home */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8E13BD6D2C18740400FC1DF3 /* Home */ = {
@@ -151,7 +154,7 @@
 				8E89E6FD2C209D73008E9682 /* Favorites */,
 				8E89E6FC2C209D57008E9682 /* Cart */,
 				8E89E6FB2C209D3E008E9682 /* Products */,
-				8E13BD6E2C18742C00FC1DF3 /* supporting_views */,
+				8E13BD6E2C18742C00FC1DF3 /* SupportingViews */,
 				8E13BD772C187DCF00FC1DF3 /* CardView.swift */,
 				8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */,
 				8E89E6F92C2094A7008E9682 /* HomeView.swift */,
@@ -159,7 +162,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		8E13BD6E2C18742C00FC1DF3 /* supporting_views */ = {
+		8E13BD6E2C18742C00FC1DF3 /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
 				8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */,
@@ -167,13 +170,13 @@
 				8E89E6F52C208FFB008E9682 /* CategoryListItem.swift */,
 				8E89E6F72C20929E008E9682 /* CategorySection.swift */,
 			);
-			path = supporting_views;
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 		8E89E6FB2C209D3E008E9682 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E89E7062C209EA6008E9682 /* Supporting_Views */,
+				8E89E7062C209EA6008E9682 /* SupportingViews */,
 				8E89E6FE2C209DB0008E9682 /* ProductsView.swift */,
 				8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */,
 			);
@@ -183,7 +186,7 @@
 		8E89E6FC2C209D57008E9682 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				8E89E7052C209E96008E9682 /* Supporting_Views */,
+				8E89E7052C209E96008E9682 /* SupportingViews */,
 				8E89E7002C209DEA008E9682 /* CartView.swift */,
 			);
 			path = Cart;
@@ -205,20 +208,36 @@
 			path = Supporting_Views;
 			sourceTree = "<group>";
 		};
-		8E89E7052C209E96008E9682 /* Supporting_Views */ = {
+		8E89E7052C209E96008E9682 /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Supporting_Views;
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
-		8E89E7062C209EA6008E9682 /* Supporting_Views */ = {
+		8E89E7062C209EA6008E9682 /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
 				8E89E70B2C21E3F0008E9682 /* ProductFilterView.swift */,
 				8E89E70D2C21E448008E9682 /* ProductFilterSectionView.swift */,
+				8E89E70F2C230BE2008E9682 /* WideProductItem.swift */,
 			);
-			path = Supporting_Views;
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		8E89E72B2C245C4B008E9682 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8E89E72C2C245C5C008E9682 /* SupportingViews */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		8E89E72C2C245C5C008E9682 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +328,7 @@
 				8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */,
 				8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */,
 				8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */,
+				8E89E7102C230BE2008E9682 /* WideProductItem.swift in Sources */,
 				8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */,
 				8E89E6FA2C2094A7008E9682 /* HomeView.swift in Sources */,
 				8E13BD782C187DCF00FC1DF3 /* CardView.swift in Sources */,
