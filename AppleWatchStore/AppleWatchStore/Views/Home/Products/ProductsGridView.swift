@@ -12,7 +12,9 @@ struct ProductsGridView: View {
         VStack {
             LazyVGrid(columns: Constants.columns, spacing: 16) {
                 ForEach(0 ..< 12) { item in
-                    NavigationLink {} label: {
+                    NavigationLink {
+                        ProductDetailView()
+                    } label: {
                         GridProductItem()
                     }
                     .buttonStyle(.plain)

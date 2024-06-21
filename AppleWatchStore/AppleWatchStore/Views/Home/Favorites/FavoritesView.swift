@@ -14,7 +14,7 @@ struct FavoritesView: View {
                 VStack(spacing: 60) {
                     ForEach(0 ..< 4) { item in
                         NavigationLink {
-                            
+                            ProductsGridView()
                         } label: {
                             WideProductItem()
                         }

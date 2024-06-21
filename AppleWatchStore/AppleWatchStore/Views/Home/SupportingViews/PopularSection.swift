@@ -16,7 +16,7 @@ struct PopularSection: View {
             LazyVGrid(columns: Constants.columns, spacing: 20) {
                 ForEach(0..<4) { _ in
                     NavigationLink {
-                        
+                        ProductDetailView()
                     } label: {
                         GridProductItem()
                     }
