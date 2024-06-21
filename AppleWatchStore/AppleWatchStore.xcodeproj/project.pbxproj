@@ -34,6 +34,7 @@
 		8E69E3852C25A3C80008B662 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3842C25A3C80008B662 /* Endpoint.swift */; };
 		8E69E3872C25A6AC0008B662 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3862C25A6AC0008B662 /* RequestError.swift */; };
 		8E69E3892C25A9500008B662 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3882C25A9500008B662 /* HttpClient.swift */; };
+		8E69E38B2C25CB5F0008B662 /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E38A2C25CB5F0008B662 /* ProductsEndpoint.swift */; };
 		8E89E6F02C1B4952008E9682 /* GridProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */; };
 		8E89E6F22C1B5076008E9682 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F12C1B5076008E9682 /* Text+Extension.swift */; };
 		8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F32C1B550C008E9682 /* PopularSection.swift */; };
@@ -79,6 +80,7 @@
 		8E69E3842C25A3C80008B662 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		8E69E3862C25A6AC0008B662 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		8E69E3882C25A9500008B662 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		8E69E38A2C25CB5F0008B662 /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
 		8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProductItem.swift; sourceTree = "<group>"; };
 		8E89E6F12C1B5076008E9682 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		8E89E6F32C1B550C008E9682 /* PopularSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSection.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		8E69E37E2C25A0C80008B662 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				8E69E38A2C25CB5F0008B662 /* ProductsEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				8E89E6F02C1B4952008E9682 /* GridProductItem.swift in Sources */,
 				8E69E3852C25A3C80008B662 /* Endpoint.swift in Sources */,
 				8E89E6F22C1B5076008E9682 /* Text+Extension.swift in Sources */,
+				8E69E38B2C25CB5F0008B662 /* ProductsEndpoint.swift in Sources */,
 				8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */,
 				8E69E36A2C245DC90008B662 /* ProductDetailDescriptionView.swift in Sources */,
 				8E69E36E2C246ED00008B662 /* SizeItemView.swift in Sources */,
