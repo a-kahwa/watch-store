@@ -30,6 +30,7 @@
 		8E69E3782C2480A80008B662 /* AppleCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3772C2480A80008B662 /* AppleCareView.swift */; };
 		8E69E37A2C2492430008B662 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3792C2492430008B662 /* ProductDetailView.swift */; };
 		8E69E37C2C2593230008B662 /* AddProductReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E37B2C2593230008B662 /* AddProductReview.swift */; };
+		8E69E3832C25A2990008B662 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3822C25A2990008B662 /* HttpMethod.swift */; };
 		8E89E6F02C1B4952008E9682 /* GridProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */; };
 		8E89E6F22C1B5076008E9682 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F12C1B5076008E9682 /* Text+Extension.swift */; };
 		8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F32C1B550C008E9682 /* PopularSection.swift */; };
@@ -71,6 +72,7 @@
 		8E69E3772C2480A80008B662 /* AppleCareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleCareView.swift; sourceTree = "<group>"; };
 		8E69E3792C2492430008B662 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		8E69E37B2C2593230008B662 /* AddProductReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductReview.swift; sourceTree = "<group>"; };
+		8E69E3822C25A2990008B662 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProductItem.swift; sourceTree = "<group>"; };
 		8E89E6F12C1B5076008E9682 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		8E89E6F32C1B550C008E9682 /* PopularSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSection.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		8E13BD592C17643500FC1DF3 /* AppleWatchStore */ = {
 			isa = PBXGroup;
 			children = (
+				8E69E37D2C25A09F0008B662 /* Networking */,
 				8E13BD6C2C1873E200FC1DF3 /* Views */,
 				8E13BD692C18730A00FC1DF3 /* App */,
 				8E13BD682C1872D300FC1DF3 /* Utilities */,
@@ -191,6 +194,46 @@
 				8E89E6F72C20929E008E9682 /* CategorySection.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		8E69E37D2C25A09F0008B662 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8E69E37E2C25A0C80008B662 /* Endpoints */,
+				8E69E37F2C25A0F00008B662 /* Models */,
+				8E69E3812C25A1270008B662 /* Services */,
+				8E69E3802C25A10C0008B662 /* Base */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8E69E37E2C25A0C80008B662 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		8E69E37F2C25A0F00008B662 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E69E3802C25A10C0008B662 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8E69E3822C25A2990008B662 /* HttpMethod.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8E69E3812C25A1270008B662 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8E89E6FB2C209D3E008E9682 /* Products */ = {
@@ -358,6 +401,7 @@
 				8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */,
 				8E13BD5D2C17643500FC1DF3 /* ContentView.swift in Sources */,
 				8E89E70C2C21E3F0008E9682 /* ProductFilterView.swift in Sources */,
+				8E69E3832C25A2990008B662 /* HttpMethod.swift in Sources */,
 				8E69E3722C247B500008B662 /* WristSizesView.swift in Sources */,
 				8E13BD762C1878BB00FC1DF3 /* Collection+extension.swift in Sources */,
 				8E69E3762C247D9A0008B662 /* ConnectivityView.swift in Sources */,
