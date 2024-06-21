@@ -14,7 +14,6 @@ struct ProductDetailView: View {
                 header
                 
                 colors
-                    .padding(.horizontal)
                 
                 VStack(spacing: 48) {
                     ProductDetailDescriptionView()
@@ -27,7 +26,16 @@ struct ProductDetailView: View {
                     
                     AppleCareView()
                 }
+                .padding(.horizontal)
             }
+        }
+        .safeAreaInset(edge: .bottom) {
+            ZStack {
+                addToCart
+            }
+            .frame(height: 80)
+            .padding(.vertical, 8)
+            .background(.ultraThinMaterial)
         }
     }
 
@@ -55,17 +63,31 @@ struct ProductDetailView: View {
     var colors: some View {
         VStack {
             SectionHeader(title: "Brand Colors")
+                .padding(.horizontal)
             
             HStack {
                 ForEach(0 ..< 3) { item in
                     Circle()
                         .fill(.gray)
-                    .frame(width: 32, height: 32)
+                        .frame(width: 32, height: 32)
                 }
                 
                 Spacer()
             }
-        }    }
+            .padding(.horizontal)
+        }
+        .padding(.horizontal)
+    }
+    
+    var addToCart: some View {
+        Button(action: {}) {
+            Text("Add To Cart")
+                .condensedLowercased(.medium, size: 24)
+                .foregroundStyle(.white)
+        }
+        .buttonStyle(.customBorderedBlack)
+        .padding(.horizontal)
+    }
 }
 
 #Preview {
