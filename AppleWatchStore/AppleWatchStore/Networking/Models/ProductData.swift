@@ -89,7 +89,7 @@ extension ProductData {
                     collection: "Apple Watch",
                     collectionType: "apple-watch",
                     image: "sport-band-olive",
-                    description: "A fairly lengthy text describing the watch.",
+                    description: "The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Sport Loop is made from a soft and breathable double-layer nylon weave, with a hook-and-loop fastener for quick and easy adjustment.",
                     caseSizes: [CaseSizeData.default],
                     wristSizes: [WristSizeData.default])
     }
