@@ -13,7 +13,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "product-filters",
+      "endpoint": "product-filters?id=\"material-aluminum\"",
       "responses": [
         {
           "uuid": "39e9c5b2-5162-4c83-b9e6-623aadc7860a",
