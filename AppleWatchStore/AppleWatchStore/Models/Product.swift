@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import Observation
 
 @Model
 final class Product {
