@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct AppleWatchStoreApp: App {
@@ -15,6 +16,7 @@ struct AppleWatchStoreApp: App {
         WindowGroup {
             ContentView()
                 .environment(manager)
+                .modelContainer(manager.modelContainer)
                 .task {
                     await manager.initializeData()
                 }
