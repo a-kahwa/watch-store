@@ -38,4 +38,13 @@ enum Constants {
         FeaturedProduct(image: "watch-card-40-s8", title: "Apple Watch Series 8", description: "Advanced health features"),
         FeaturedProduct(image: "watch-card-40-hermes", title: "Apple Watch Hermes", description: "Fashion Forward")
     ]
+    
+    static let categories: [(name: String, icon: String)] = [
+        (name: "Apple Watch Bands", icon: "icon-watch-band"),
+        (name: "Case And Protection", icon: "icon-watch-case"),
+        (name: "Headphones And Speakers", icon: "icon-headphones"),
+        (name: "Health And Fitness", icon: "icon-fitness"),
+        (name: "Power And Cables", icon: "icon-powercables"),
+        (name: "Wireless Chargers", icon: "icon-wirelesschargers")
+    ]
 }

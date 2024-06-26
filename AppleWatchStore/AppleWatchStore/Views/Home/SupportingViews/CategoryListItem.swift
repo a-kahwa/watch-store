@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct CategoryListItem: View {
+    var item: (name: String, icon: String)
+    
     var body: some View {
         VStack (spacing: 4) {
             HStack {
                 HStack {
-                    Image(.iconWatchBand)
+                    Image(item.icon)
                         .resizable()
                         .frame(width: 32, height: 28)
                     
-                    Text("Apple Watch Bands")
+                    Text(item.name)
                         .condensed(.light, size: 16)
                 }
                 
@@ -32,5 +34,5 @@ struct CategoryListItem: View {
 }
 
 #Preview {
-    CategoryListItem()
+    CategoryListItem(item: (name: "Apple Watch Bands", icon: "icon-watch-bands"))
 }
