@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(DataManager.self) private var manager
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -15,6 +17,13 @@ struct HomeView: View {
             }
             .navigationTitle("Welcome")
             .navigationBarTitleDisplayMode(.large)
+            .overlay {
+                if manager.dbInitializationProgress {
+                    ProgressView("Loading")
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                        .background(.white)
+                }
+            }
             .background(Color(.baseBackground))
         }
     }

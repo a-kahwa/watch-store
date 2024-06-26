@@ -7,6 +7,7 @@
 
 import Foundation
 import Observation
+import SwiftData
 
 @Observable
 final class DataManager {
@@ -16,16 +17,52 @@ final class DataManager {
     var productData = [ProductData]()
     var filterData = [ProductFilterData]()
     
+    var dbInitializationProgress: Bool = false
+    
+    let modelContainer = try! ModelContainer(for: Product.self, ProductFilter.self)
+    
+    var hasSetupDatabase: Bool {
+        didSet {
+            UserDefaults.standard.setValue(hasSetupDatabase, forKey: "hasSetupDatabase")
+        }
+    }
+    
+    init() {
+        self.hasSetupDatabase = UserDefaults.standard.bool(forKey: "hasSetupDatabase")
+    }
+    
     func initializeData() async {
+        guard !hasSetupDatabase else { return }
+        
+        dbInitializationProgress = true
+        
         do {
             productData = try await fetchProducts() ?? []
             filterData = try await fetchFilterDat() ?? []
             
-            dump(productData)
-            dump(filterData)
+//            dump(productData)
+//            dump(filterData)
         }
         catch {
             debugPrint("❌ unable to get roduct r filter data: \(error)")
+        }
+        
+        guard productData.isNotEmpty else { return }
+        guard filterData.isNotEmpty else { return }
+        
+        Task() { @MainActor in
+            let products = productData.map { Product(product: $0) }
+            let filters = filterData.map { ProductFilter(filter: $0) }
+            
+            products.forEach { modelContainer.mainContext.insert($0) }
+            filters.forEach { modelContainer.mainContext.insert($0) }
+            
+            dbInitializationProgress = false
+            hasSetupDatabase = true
+            
+            print("‼️ ====== DADTABASE =======")
+            dump(products)
+            dump(filters)
         }
     }
     

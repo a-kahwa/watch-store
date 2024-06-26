@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardView: View {
+    let product: FeaturedProduct
+    
     var body: some View {
         VStack {
             ZStack(alignment: .bottom) {
@@ -16,14 +18,14 @@ struct CardView: View {
                     .frame(height: 248.0 / 1.6)
                 
                 VStack {
-                    Image(.watchCard40Ultra)
+                    Image(product.image)
                     
                     VStack {
                         VStack(alignment: .center, spacing: -4) {
-                            Text("Apple Watch Ultra")
+                            Text(product.title)
                                 .condensed(.light, size: 20)
                             
-                            Text("Ready For Adventure")
+                            Text(product.description)
                                 .condensedLowercased(.bold, size: 24)
                         }
                         
@@ -46,5 +48,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView()
+    CardView(product: FeaturedProduct.default)
 }
