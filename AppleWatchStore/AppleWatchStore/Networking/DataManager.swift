@@ -31,7 +31,7 @@ final class DataManager {
     
     func fetchProducts() async throws -> [ProductData]? {
         var products: [ProductData] = []
-        var results = await service.fetchProducts()
+        let results = await service.fetchProducts()
         
         switch results {
         case .success(let result):
@@ -48,7 +48,7 @@ final class DataManager {
     
     func fetchFilterDat() async throws -> [ProductFilterData]? {
         var filters: [ProductFilterData] = []
-        var results = await filterService.fetchProductFilters()
+        let results = await filterService.fetchProductFilters()
         
         switch results {
         case .success(let result):
