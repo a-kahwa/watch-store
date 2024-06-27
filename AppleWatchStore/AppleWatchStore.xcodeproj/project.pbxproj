@@ -48,6 +48,9 @@
 		8E69E3A22C2C3E060008B662 /* WristSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3A12C2C3E060008B662 /* WristSize.swift */; };
 		8E69E3A42C2C4C1D0008B662 /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3A32C2C4C1D0008B662 /* ProductFilter.swift */; };
 		8E69E3A72C2C6C720008B662 /* FeaturedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3A62C2C6C720008B662 /* FeaturedProduct.swift */; };
+		8E69E3A92C2DDB590008B662 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3A82C2DDB590008B662 /* ProductsListView.swift */; };
+		8E69E3AB2C2DE22F0008B662 /* ProductLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3AA2C2DE22F0008B662 /* ProductLayout.swift */; };
+		8E69E3AD2C2DEADF0008B662 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3AC2C2DEADF0008B662 /* Sheet.swift */; };
 		8E89E6F02C1B4952008E9682 /* GridProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */; };
 		8E89E6F22C1B5076008E9682 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F12C1B5076008E9682 /* Text+Extension.swift */; };
 		8E89E6F42C1B550C008E9682 /* PopularSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89E6F32C1B550C008E9682 /* PopularSection.swift */; };
@@ -107,6 +110,9 @@
 		8E69E3A12C2C3E060008B662 /* WristSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WristSize.swift; sourceTree = "<group>"; };
 		8E69E3A32C2C4C1D0008B662 /* ProductFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		8E69E3A62C2C6C720008B662 /* FeaturedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProduct.swift; sourceTree = "<group>"; };
+		8E69E3A82C2DDB590008B662 /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
+		8E69E3AA2C2DE22F0008B662 /* ProductLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLayout.swift; sourceTree = "<group>"; };
+		8E69E3AC2C2DEADF0008B662 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		8E89E6EF2C1B4952008E9682 /* GridProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProductItem.swift; sourceTree = "<group>"; };
 		8E89E6F12C1B5076008E9682 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		8E89E6F32C1B550C008E9682 /* PopularSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSection.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 				8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */,
 				8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */,
 				8E89E6F12C1B5076008E9682 /* Text+Extension.swift */,
+				8E69E3AA2C2DE22F0008B662 /* ProductLayout.swift */,
+				8E69E3AC2C2DEADF0008B662 /* Sheet.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 				8E89E7062C209EA6008E9682 /* SupportingViews */,
 				8E89E6FE2C209DB0008E9682 /* ProductsView.swift */,
 				8E89E7092C21DDAB008E9682 /* ProductsGridView.swift */,
+				8E69E3A82C2DDB590008B662 /* ProductsListView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -461,6 +470,7 @@
 				8E13BD742C18768100FC1DF3 /* SectionHeader.swift in Sources */,
 				8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */,
 				8E69E3972C29C17E0008B662 /* ProductFilterData.swift in Sources */,
+				8E69E3A92C2DDB590008B662 /* ProductsListView.swift in Sources */,
 				8E69E3892C25A9500008B662 /* HttpClient.swift in Sources */,
 				8E89E6F82C20929E008E9682 /* CategorySection.swift in Sources */,
 				8E69E3A02C2C3A4D0008B662 /* CaseSize.swift in Sources */,
@@ -500,7 +510,9 @@
 				8E69E3A22C2C3E060008B662 /* WristSize.swift in Sources */,
 				8E69E3912C25D5E70008B662 /* ProductData.swift in Sources */,
 				8E89E7082C20A024008E9682 /* Theme.swift in Sources */,
+				8E69E3AD2C2DEADF0008B662 /* Sheet.swift in Sources */,
 				8E69E3992C29C4690008B662 /* ProductFilterService.swift in Sources */,
+				8E69E3AB2C2DE22F0008B662 /* ProductLayout.swift in Sources */,
 				8E13BD5B2C17643500FC1DF3 /* AppleWatchStoreApp.swift in Sources */,
 				8E89E7032C209E1C008E9682 /* FavoritesView.swift in Sources */,
 			);
