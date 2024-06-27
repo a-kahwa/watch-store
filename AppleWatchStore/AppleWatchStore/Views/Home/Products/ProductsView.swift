@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductsView: View {
-    @State private var layout: ProductLayout = .list
+    @State private var layout = ProductLayout.list
     @State private var sheet: Sheet.SheetType?
             
     var body: some View {
@@ -22,7 +22,14 @@ struct ProductsView: View {
     }
     
     var content: some View {
-        ProductsListView()
+        Group {
+            if layout == .grid {
+                ProductsGridView()
+            }
+            else {
+                ProductsListView()
+            }
+        }
     }
 }
 
@@ -45,6 +52,7 @@ extension ProductsView {
                     ForEach(ProductLayout.allCases) { option in
                         if option != .none {
                             Label(option.title, systemImage: option.imageName)
+                                .tag(option)
                         }
                     }
                 }
@@ -52,7 +60,7 @@ extension ProductsView {
             } label: {
                 Label("Layout Options", systemImage: layout.imageName)
                     .symbolVariant(.fill)
-                    .labelStyle(.iconOnly)
+                    .labelStyle(.titleAndIcon)
             }
         }
     }
