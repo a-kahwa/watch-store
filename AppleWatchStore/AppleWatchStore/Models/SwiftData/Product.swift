@@ -77,6 +77,12 @@ extension Product {
         "\(materialDisplay) \(finishDisplay) Case"
     }
     
+    var detailTitle: String {
+        "\(materialDisplay) \(finishDisplay) Case with \(bandColorDisplay)"
+    }
+    
+    
+    
     var band: String {
         return "\(image)-l"
     }

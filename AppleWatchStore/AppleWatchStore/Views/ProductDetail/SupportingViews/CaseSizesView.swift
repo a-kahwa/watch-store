@@ -36,7 +36,6 @@ struct CaseSizesView: View {
                 .buttonStyle(.plain)
             }
         }
-        .padding(.horizontal)
     }
 }
 

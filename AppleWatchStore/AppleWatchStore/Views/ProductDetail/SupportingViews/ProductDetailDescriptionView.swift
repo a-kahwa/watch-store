@@ -13,7 +13,7 @@ struct ProductDetailDescriptionView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(product.title)
+                Text(product.detailTitle)
                     .condensed(.bold, size: 36)
                     .lineLimit(2)
                 
@@ -45,7 +45,6 @@ struct ProductDetailDescriptionView: View {
                     .padding(.horizontal)
             }
             
-            Spacer()
         }
         .padding(.horizontal)
     }

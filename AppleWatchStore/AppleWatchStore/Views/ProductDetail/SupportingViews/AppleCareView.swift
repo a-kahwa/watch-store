@@ -17,7 +17,6 @@ struct AppleCareView: View {
             
             noAppleCare
         }
-        .padding(.horizontal)
     }
     
     var noAppleCare: some View {

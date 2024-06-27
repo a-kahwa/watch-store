@@ -36,7 +36,6 @@ struct WristSizesView: View {
                 .buttonStyle(.plain)
             }
         }
-        .padding(.horizontal)
     }
 }
 
