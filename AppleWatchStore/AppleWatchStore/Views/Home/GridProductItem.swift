@@ -50,7 +50,12 @@ struct GridProductItem: View {
                 .fill(Constants.gradient)
         )
         .overlay(alignment: .topTrailing) {
-            Constants.heart
+            Constants.heart.onLongPressGesture(minimumDuration: 0.24) {
+                product.isFavorite.toggle()
+            }
+            .symbolVariant(product.isFavorite ? .fill : .none)
+            .font(.system(size: 24))
+            .padding(.top, 4)
         }
     }
 }
