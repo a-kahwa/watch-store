@@ -12,7 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeView()
+//            HomeView()
+            ProductFilterView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

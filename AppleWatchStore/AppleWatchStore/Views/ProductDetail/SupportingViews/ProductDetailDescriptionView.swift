@@ -44,7 +44,6 @@ struct ProductDetailDescriptionView: View {
                     .condensed(.light, size: 20)
                     .padding(.horizontal)
             }
-            
         }
         .padding(.horizontal)
     }
