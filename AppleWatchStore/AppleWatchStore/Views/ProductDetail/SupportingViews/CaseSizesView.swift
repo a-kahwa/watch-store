@@ -40,6 +40,6 @@ struct CaseSizesView: View {
     }
 }
 
-#Preview {
-    CaseSizesView()
-}
+//#Preview {
+//    CaseSizesView()
+//}
