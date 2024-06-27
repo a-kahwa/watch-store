@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct PopularSection: View {
+    @Query(filter: #Predicate<Product> { product in
+        product.isFeatured == true
+    })
+    var products: [Product]
+    
     var body: some View {
         VStack {
             SectionHeader(title: "Popular", icon: "slider.horizontal.3")
                 .padding(.horizontal)
             
             LazyVGrid(columns: Constants.columns, spacing: 20) {
-                ForEach(0..<4) { _ in
+                ForEach(products) { product in
                     NavigationLink {
                         ProductDetailView()
                     } label: {
-                        GridProductItem()
+                        GridProductItem(product: product)
                     }
                     .buttonStyle(.plain)
                 }

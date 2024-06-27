@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProductsGridView: View {
+    @Query var products: [Product]
+    
     var body: some View {
         VStack {
             LazyVGrid(columns: Constants.columns, spacing: 16) {
-                ForEach(0 ..< 12) { item in
+                ForEach(products) { product in
                     NavigationLink {
                         ProductDetailView()
                     } label: {
-                        GridProductItem()
+                        GridProductItem(product: product)
                     }
                     .buttonStyle(.plain)
                 }
@@ -25,8 +28,8 @@ struct ProductsGridView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        ProductsGridView()
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        ProductsGridView()
+//    }
+//}

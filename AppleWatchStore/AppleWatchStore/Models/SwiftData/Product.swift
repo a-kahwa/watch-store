@@ -73,7 +73,11 @@ extension Product {
         }
     }
     
-    var nand: String {
+    var title: String {
+        "\(materialDisplay) \(finishDisplay) Case"
+    }
+    
+    var band: String {
         return "\(image)-l"
     }
     

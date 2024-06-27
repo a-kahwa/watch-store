@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct GridProductItem: View {
+    let product: Product
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
                 ZStack {
-                    Image(.sportBandProductRedLarge)
+                    Image(product.band)
                         .resizable()
                         .frame(width: 250, height: 250)
                     
-                    Image(.aluminumMidnightLarge)
+                    Image(product.face)
                         .resizable()
                         .frame(width: 250, height: 250)
                 }
                 
                 VStack {
-                    Text("€").ultraLight() + Text("888").heavy()
+                    Text("€").ultraLight() + Text(product.displayPrice).heavy()
                     
-                    Text("Midnight Aluminium Case")
+                    Text(product.title)
                         .condensed(.bold, size: 16)
                     
-                    Text("Braided Solo Loop")
+                    Text(product.bandDisplay)
                         .condensed(.light, size: 16)
                 }
                 .foregroundStyle(.primary)
@@ -53,6 +55,6 @@ struct GridProductItem: View {
     }
 }
 
-#Preview {
-    GridProductItem()
-}
+//#Preview {
+//    GridProductItem(product: Product.default)
+//}
