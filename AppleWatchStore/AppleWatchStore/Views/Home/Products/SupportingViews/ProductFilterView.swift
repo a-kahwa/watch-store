@@ -9,8 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ProductFilterView: View {
+    @Environment(\.dismiss) private var dismiss
     @Query var productFilters: [ProductFilter]
-    
     @State private var sections: [[ProductFilter]] = []
     
     let categories = ["material", "finish", "band"]
@@ -56,7 +56,7 @@ struct ProductFilterView: View {
                 .frame(height: 124)
                 .background(.ultraThinMaterial, in: Rectangle())
             
-            Button(action: {}, label: {
+            Button(action: { self.dismiss.callAsFunction() }, label: {
                 Text("FILTER (0) ITEMS")
                     .condensedLowercased(.medium, size: 24)
                     .foregroundStyle(.white)
@@ -69,7 +69,7 @@ struct ProductFilterView: View {
     }
     
     var closeButton: some View {
-        Button(action: {}, label: {
+        Button(action: { self.dismiss.callAsFunction() }, label: {
             Text("CLOSE")
                 .foregroundStyle(.primary)
                 .condensed(.bold, size: 20)
