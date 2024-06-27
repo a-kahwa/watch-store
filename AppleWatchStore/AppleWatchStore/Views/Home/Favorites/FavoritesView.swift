@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FavoritesView: View {
+    @Query(filter: #Predicate<Product> { product in
+        product.isFavorite == true
+    })
+    var products: [Product]
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 60) {
-                    ForEach(0 ..< 4) { item in
+                    ForEach(products) { product in
                         NavigationLink {
-                            ProductsGridView()
+                            ProductDetailView(product: product)
                         } label: {
-                            WideProductItem()
+                            WideProductItem(product: product)
                         }
                         .buttonStyle(.plain)
                     }

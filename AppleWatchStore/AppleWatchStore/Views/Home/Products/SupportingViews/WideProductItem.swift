@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct WideProductItem: View {
+    let product: Product
+    
     var body: some View {
         ZStack {
             HStack(alignment: .bottom, spacing: 0) {
                 VStack(spacing: 4) {
                     ZStack {
-                        Image(.sportBandProductRedLarge)
+                        Image(product.band)
                             .resizable()
                             .frame(width: 250, height: 250)
                         
-                        Image(.aluminumMidnightLarge)
+                        Image(product.face)
                             .resizable()
                             .frame(width: 250, height: 250)
                     }
@@ -35,14 +37,14 @@ struct WideProductItem: View {
                 Spacer()
                 
                 VStack(alignment: .trailing, spacing: -4) {
-                    Text("€").ultraLight() + Text("888").heavy()
+                    Text("€").ultraLight() + Text(product.displayPrice).heavy()
                     
                     VStack(alignment: .trailing) {
-                        Text("Midnight Aluminium Case")
+                        Text(product.title)
                             .condensed(.bold, size: 16)
                         
                         
-                        Text("Braided Solo Loop")
+                        Text(product.bandDisplay)
                             .condensed(.light, size: 16)
                     }
                 }
@@ -58,12 +60,17 @@ struct WideProductItem: View {
         )
         .frame(maxWidth: .infinity, alignment: .bottom)
         .overlay(alignment: .topTrailing) {
-            Constants.heart
+            Constants.heart.onLongPressGesture(minimumDuration: 0.24) {
+                product.isFavorite.toggle()
+            }
+            .symbolVariant(product.isFavorite ? .fill : .none)
+            .font(.system(size: 24))
+            .padding(.top, 4)
         }
         .padding(.horizontal)
     }
 }
 
-#Preview {
-    WideProductItem()
-}
+//#Preview {
+//    WideProductItem()
+//}

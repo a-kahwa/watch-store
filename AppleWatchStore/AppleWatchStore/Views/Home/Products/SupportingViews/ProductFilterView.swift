@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProductFilterView: View {
+    @Query var productFilters: [ProductFilter]
+    
+    @State private var sections: [[ProductFilter]] = []
+    
+    let categories = ["material", "finish", "band"]
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -20,6 +27,13 @@ struct ProductFilterView: View {
                 }
             }
             .navigationTitle("PRODUCT FILTERS")
+            .task {
+                categories.forEach { category in
+                    let filtersByCategry = productFilters.filter { $0.category == category }
+                    
+                    sections.append(filtersByCategry)
+                }
+            }
             .safeAreaInset(edge: .bottom) {
                 filterStatus
             }
@@ -28,8 +42,8 @@ struct ProductFilterView: View {
     
     var content: some View {
         VStack(spacing: 48) {
-            ForEach(0 ..< 3) { item in
-                ProductFilterSectionView()
+            ForEach($sections, id: \.self) { $section in
+                ProductFilterSectionView(items: $section)
             }
         }
         .padding(.top, 40)

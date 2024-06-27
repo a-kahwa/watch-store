@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @State var product: Product
+    
     var body: some View {
         ZStack {
             ScrollView {
@@ -16,11 +18,11 @@ struct ProductDetailView: View {
                 colors
                 
                 VStack(spacing: 48) {
-                    ProductDetailDescriptionView()
+                    ProductDetailDescriptionView(product: product)
                     
-                    CaseSizesView()
+                    CaseSizesView(product: product)
                     
-                    WristSizesView()
+                    WristSizesView(product: product)
                     
                     ConnectivityView()
                     
@@ -48,11 +50,11 @@ struct ProductDetailView: View {
             }
             
             ZStack {
-                Image(.sportBandProductRedLarge)
+                Image(product.band)
                     .resizable()
                     .frame(width: 405, height: 405)
                 
-                Image(.aluminumMidnightLarge)
+                Image(product.face)
                     .resizable()
                     .frame(width: 405, height: 405)
             }
@@ -90,6 +92,6 @@ struct ProductDetailView: View {
     }
 }
 
-#Preview {
-    ProductDetailView()
-}
+//#Preview {
+//    ProductDetailView()
+//}
