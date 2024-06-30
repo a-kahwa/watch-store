@@ -13,13 +13,13 @@ final class Product {
     @Attribute(.unique) var id: String
     let isFeatured: Bool
     let bandDisplay: String
-    let bandType: String
+    let bandTypeString: String
     let series: String
     let seriesDisplay: String
     let materialDisplay: String
-    let materialType: String
+    let materialTypeString: String
     let finishDisplay: String
-    let finishType: String
+    let finishTypeString: String
     let bandColorType: String
     let bandColorDisplay: String
     let collection: String
@@ -38,13 +38,13 @@ final class Product {
         self.id = UUID().uuidString
         self.isFeatured = product.isFeatured
         self.bandDisplay = product.bandDisplay
-        self.bandType = product.bandType
+        self.bandTypeString = product.bandType
         self.series = product.series
         self.seriesDisplay = product.seriesDisplay
         self.materialDisplay = product.materialDisplay
-        self.materialType = product.materialType
+        self.materialTypeString = product.materialType
         self.finishDisplay = product.finishDisplay
-        self.finishType = product.finishType
+        self.finishTypeString = product.finishType
         self.bandColorType = product.bandColorType
         self.bandColorDisplay = product.bandColorDisplay
         self.collection = product.collection
@@ -88,10 +88,22 @@ extension Product {
     }
     
     var face: String {
-        return "\(materialType)-\(finishType)-l"
+        return "\(materialTypeString)-\(finishTypeString)-l"
     }
     
     func createCartProductId(caseSize: String, wristSize: String) -> String {
         return "\(self.id)-\(caseSize)-\(wristSize)-\(self.bandColorType)"
+    }
+    
+    var bandType: ProductBandType {
+        return ProductBandType(rawValue: self.bandTypeString) ?? .none
+    }
+    
+    var materialType: ProductMaterial {
+        return ProductMaterial(rawValue: self.materialTypeString) ?? .none
+    }
+    
+    var finishType: ProductFinish {
+        return ProductFinish(rawValue: self.finishTypeString) ?? .none
     }
 }
