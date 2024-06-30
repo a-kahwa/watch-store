@@ -29,6 +29,8 @@ struct ProductFilterView: View {
             }
             .navigationTitle("PRODUCT FILTERS")
             .task {
+                filter.fetchSaved(filters: productFilters)
+                
                 categories.forEach { category in
                     let filtersByCategry = productFilters.filter { $0.category == category }
                     
