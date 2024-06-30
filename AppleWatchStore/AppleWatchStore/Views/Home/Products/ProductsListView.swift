@@ -9,12 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ProductsListView: View {
+    @Environment(ProductsFilter.self) private var filter
     @Query var products: [Product]
     
     var body: some View {
         ScrollView {
             VStack(spacing: 60) {
-                ForEach(products) { product in
+                ForEach(filter.filterProducts(products: products)) { product in
                     NavigationLink {
                         ProductDetailView(product: product)
                     } label: {
