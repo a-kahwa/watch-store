@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductFilterSectionView: View {
+    @Environment(ProductsFilter.self) private var filter
     @Binding var items: [ProductFilter]
     
     var body: some View {
@@ -30,6 +31,7 @@ struct ProductFilterSectionView: View {
                     .frame(width: 24, height: 24)
                 
                 Image(.iconCheckmark)
+                    .opacity(item.isSelected ? 1 : 0)
             }
             
             Text(item.title)
@@ -39,6 +41,13 @@ struct ProductFilterSectionView: View {
         }
         .onTapGesture {
             item.isSelected.toggle()
+            
+            if item.isSelected {
+                filter.add(spec: item.spec)
+            }
+            else {
+                filter.remove(spec: item.spec)
+            }
         }
     }
 }
