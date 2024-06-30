@@ -10,6 +10,7 @@ import SwiftData
 
 struct ProductFilterView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(ProductsFilter.self) private var filter
     @Query var productFilters: [ProductFilter]
     @State private var sections: [[ProductFilter]] = []
     
@@ -57,7 +58,7 @@ struct ProductFilterView: View {
                 .background(.ultraThinMaterial, in: Rectangle())
             
             Button(action: { self.dismiss.callAsFunction() }, label: {
-                Text("FILTER (0) ITEMS")
+                Text("FILTER (^[\(filter.filterCount) ITEM](inflect:true))")
                     .condensedLowercased(.medium, size: 24)
                     .foregroundStyle(.white)
             })
