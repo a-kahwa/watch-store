@@ -35,3 +35,17 @@ extension ProductFilter {
         ProductFilter(filter: ProductFilterData.default)
     }
 }
+
+extension ProductFilter {
+    var spec: ProductSpecs {
+        if category == "material" {
+            return ProductSpecs.material(ProductMaterial(rawValue: type) ?? .none)
+        }
+        else if category == "band" {
+            return ProductSpecs.band(ProductBandType(rawValue: type) ?? .none)
+        }
+        else {
+            return ProductSpecs.finish(ProductFinish(rawValue: type) ?? .none)
+        }
+    }
+}
