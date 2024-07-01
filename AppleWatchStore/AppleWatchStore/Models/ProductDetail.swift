@@ -14,10 +14,14 @@ enum ProductAppleCzreType: String {
     case none
 }
 
-enum ProductCellularType {
+enum ProductCellularType: String, Identifiable, CaseIterable {
     case none
     case wifiOnly
     case wifiAndCellular
+    
+    var id: String {
+        rawValue
+    }
 }
 
 @Observable
@@ -26,4 +30,9 @@ class ProductDetail {
     var selectedWristSSize: WristSize?
     var selectedGPSCellular: ProductCellularType = .none
     var selectedAppleCare: ProductAppleCzreType = .none
+    
+    static let cellularTypeIds = [
+        ProductCellularType.wifiOnly,
+        ProductCellularType.wifiAndCellular
+    ]
 }

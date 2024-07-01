@@ -110,6 +110,7 @@ struct AppleCareView: View {
     }
 }
 
-//#Preview {
-//    AppleCareView()
-//}
+#Preview {
+    AppleCareView()
+        .environment(ProductDetail())
+}
