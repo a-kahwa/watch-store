@@ -15,7 +15,7 @@ struct ConnectivityView: View {
             HStack {
                 ForEach(0 ..< 2) { item in
                     Button(action: {}) {
-                        WifiCellularView()
+                        WifiCellularView(type: .none)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(.baseMediumGrey, lineWidth: 1)
