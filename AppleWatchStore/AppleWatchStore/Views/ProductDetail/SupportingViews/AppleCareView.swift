@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AppleCareView: View {
+    @Environment(ProductDetail.self) var productDetail
+    
     var body: some View {
         VStack(spacing: 20) {
             SectionHeader(title: "apple Care + Coverage")
@@ -20,7 +22,9 @@ struct AppleCareView: View {
     }
     
     var noAppleCare: some View {
-        Button(action: {}) {
+        Button(action: {
+            productDetail.selectedAppleCare = .none
+        }) {
             VStack(alignment: .leading) {
                 Text("No Apple Care +")
                     .condensed(.bold, size: 20)
@@ -32,14 +36,17 @@ struct AppleCareView: View {
             .contentShape(RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(.baseMediumGrey, lineWidth: 1)
+                    .stroke(productDetail.selectedAppleCare == .none ? .baseStroke : .baseMediumGrey,
+                            lineWidth: productDetail.selectedAppleCare == .none ? 2 : 1)
             )
         }
         .buttonStyle(.plain)
     }
     
     var addAppleCare: some View {
-        Button(action: {}) {
+        Button(action: {
+            productDetail.selectedAppleCare = .add
+        }) {
             VStack(alignment: .leading) {
                 header
 
@@ -52,7 +59,8 @@ struct AppleCareView: View {
             .contentShape(RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(.baseMediumGrey, lineWidth: 1)
+                    .stroke(productDetail.selectedAppleCare == .add ? .baseStroke : .baseMediumGrey,
+                            lineWidth: productDetail.selectedAppleCare == .add ? 2 : 1)
             )
         }
         .buttonStyle(.plain)
@@ -102,6 +110,6 @@ struct AppleCareView: View {
     }
 }
 
-#Preview {
-    AppleCareView()
-}
+//#Preview {
+//    AppleCareView()
+//}
