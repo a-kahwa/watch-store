@@ -252,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				8E69E37E2C25A0C80008B662 /* Endpoints */,
-				8E69E37F2C25A0F00008B662 /* Models */,
 				8E69E3812C25A1270008B662 /* Services */,
 				8E69E3802C25A10C0008B662 /* Base */,
 				8E69E39A2C2AFE170008B662 /* DataManager.swift */,
@@ -267,17 +266,6 @@
 				8E69E3942C29BE870008B662 /* ProductsFilterEndPoint.swift */,
 			);
 			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		8E69E37F2C25A0F00008B662 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8E69E38C2C25CFBE0008B662 /* WristSizeData.swift */,
-				8E69E38E2C25D29A0008B662 /* CaseSizeData.swift */,
-				8E69E3902C25D5E70008B662 /* ProductData.swift */,
-				8E69E3962C29C17E0008B662 /* ProductFilterData.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8E69E3802C25A10C0008B662 /* Base */ = {
@@ -303,6 +291,10 @@
 		8E69E39C2C2C39C60008B662 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E69E38C2C25CFBE0008B662 /* WristSizeData.swift */,
+				8E69E38E2C25D29A0008B662 /* CaseSizeData.swift */,
+				8E69E3902C25D5E70008B662 /* ProductData.swift */,
+				8E69E3962C29C17E0008B662 /* ProductFilterData.swift */,
 				8E69E3A52C2C6C430008B662 /* SwiftData */,
 				8E69E3A62C2C6C720008B662 /* FeaturedProduct.swift */,
 			);
