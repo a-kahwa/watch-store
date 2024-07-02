@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CaseSizesView: View {
+    @Environment(ShoppingCart.self) var cart
     @Environment(ProductDetail.self) var productDetail
     
     let product: Product

@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct CartView: View {
+    @Environment(ShoppingCart.self) var cart
+    
     var body: some View {
+        
         NavigationStack {
             List {
-                ForEach(0 ..< 1) { item in
-                    casrtItem
+                ForEach(cart.products) { product in
+                    casrtItem(product: product)
                 }
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -31,11 +34,12 @@ struct CartView: View {
         }
     }
     
-    var casrtItem: some View {
+    
+    func casrtItem(product: CartProduct) -> some View {
         HStack(alignment: .bottom, spacing: 20) {
-            watchImage
+            watchImage(product: product)
             
-            watchDetails
+            watchDetails(product: product)
             
             Spacer()
         }
@@ -43,13 +47,13 @@ struct CartView: View {
         .frame(minWidth: 0, maxWidth: .infinity)
     }
     
-    var watchImage: some View {
+    func watchImage(product: CartProduct) -> some View {
         HStack {
             ZStack {
-                Image(.sportBandProductRedLarge)
+                Image(product.band)
                     .resizable()
                 
-                Image(.aluminumMidnightLarge)
+                Image(product.face)
                     .resizable()
             }
             .frame(width: 268, height: 268)
@@ -62,27 +66,27 @@ struct CartView: View {
         }
     }
     
-    var watchDetails: some View {
+    func watchDetails(product: CartProduct) -> some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Text("Aple Watch Series 8 Aple Watch Series 8")
+                Text(product.productSeries)
                     .condensed(.black, size: 20)
                     .lineLimit(2)
                 
                 Group {
-                    Text("€").ultraLight() + Text("888").heavy()
+                    Text("€").ultraLight() + Text(product.displayPrice).heavy()
                 }
                 
-                Text("45 mm")
+                Text(product.caseSize)
                     .condensed(.medium, size: 16)
                 
-                Text("Starligh Aluminium Case")
+                Text("\(product.caseMaterial) \(product.caseFinish) Case")
                     .condensed(.medium, size: 16)
                 
-                Text("Abyss Blue Braided Solo Loop")
+                Text("\(product.bandColor) \(product.bandName)")
                     .condensed(.light, size: 16)
                 
-                Text("Loop Size: 88")
+                Text("Loop Size: \(product.wristSize)")
                     .condensed(.light, size: 16)
                 
                 HStack {
@@ -93,11 +97,15 @@ struct CartView: View {
                         .frame(width: 32, height: 32)
                     
                     Image(.icon5G)
+                        .opacity(product.cellularType == .wifiAndCellular ? 1 : 0)
+                    
                 }
             }
             
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    cart.decrement(product: product)
+                }, label: {
                     Image(systemName: "minus")
                         .font(.system(size: 20))
                         .bold()
@@ -107,10 +115,12 @@ struct CartView: View {
                 .frame(width: 40)
                 .buttonStyle(.customBorderedBlack)
                 
-                Text("88")
+                Text("\(product.quantity)")
                     .condensed(.heavy, size: 40)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    cart.increment(product: product)
+                }, label: {
                     Image(systemName: "plus")
                         .font(.system(size: 16))
                         .bold()
