@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @Environment(ProductDetail.self) var productDetail
     @Environment(ShoppingCart.self) var cart
     
     @State var product: Product
@@ -84,13 +85,30 @@ struct ProductDetailView: View {
     }
     
     var addToCart: some View {
-        Button(action: {}) {
+        Button(action: {
+            cart.addCartProduct(product: product,
+                                caseSize: productDetail.selectedCaseSize,
+                                wristSize: productDetail.selectedWristSSize,
+                                cellType: productDetail.selectedGPSCellular)
+            
+            productDetail.hasAddedToCart.toggle()
+            
+            reset()
+        }) {
             Text("Add To Cart")
                 .condensedLowercased(.medium, size: 24)
                 .foregroundStyle(.white)
         }
         .buttonStyle(.customBorderedBlack)
         .padding(.horizontal)
+    }
+    
+    func reset() {
+        productDetail.selectedCaseSize = nil
+        productDetail.selectedWristSSize = nil
+        productDetail.selectedGPSCellular = .none
+        productDetail.selectedAppleCare = .none
+        productDetail.hasAddedToCart.toggle()
     }
 }
 

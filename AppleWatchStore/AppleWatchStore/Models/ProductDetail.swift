@@ -30,9 +30,21 @@ class ProductDetail {
     var selectedWristSSize: WristSize?
     var selectedGPSCellular: ProductCellularType = .none
     var selectedAppleCare: ProductAppleCzreType = .none
+    var hasAddedToCart: Bool = false
     
     static let cellularTypeIds = [
         ProductCellularType.wifiOnly,
         ProductCellularType.wifiAndCellular
     ]
+    
+    func addToCartCheck() -> Bool {
+        if selectedCaseSize != nil &&
+            selectedWristSSize != nil &&
+            selectedGPSCellular != .none {
+            
+            return true
+        }
+        
+        return false
+    }
 }
