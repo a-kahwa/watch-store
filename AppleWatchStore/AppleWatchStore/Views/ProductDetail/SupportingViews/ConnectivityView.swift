@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct ConnectivityView: View {
+    @Environment(ProductDetail.self) var productDetail
+    
     var body: some View {
         VStack {
             SectionHeader(title: "Connectivity")
+                .padding(.bottom)
             
             HStack {
-                ForEach(0 ..< 2) { item in
-                    Button(action: {}) {
-                        WifiCellularView()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(.baseMediumGrey, lineWidth: 1)
+                ForEach(ProductCellularType.allCases) { item in
+                    Button(action: {
+                        productDetail.selectedGPSCellular = item
+                    }) {
+                        if item != .none {
+                            WifiCellularView(type: item)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(productDetail.selectedGPSCellular == item ? .baseStroke : .baseMediumGrey,
+                                                lineWidth: productDetail.selectedGPSCellular == item ? 2 : 1)
                             )
+                        }
                     }
                     .buttonStyle(.plain)
                 }
@@ -30,4 +38,5 @@ struct ConnectivityView: View {
 
 #Preview {
     ConnectivityView()
+        .environment(ProductDetail())
 }

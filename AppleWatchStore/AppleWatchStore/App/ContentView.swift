@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(ShoppingCart.self) var cart
     @State private var selectedTab = 0
     
     var body: some View {
@@ -28,7 +29,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Bag", systemImage: "bag")
                 }
-                .badge(88)
+                .badge(cart.cartQuantity)
                 .tag(2)
             
             FavoritesView()

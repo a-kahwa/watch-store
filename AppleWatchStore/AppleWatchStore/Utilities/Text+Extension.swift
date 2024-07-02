@@ -20,7 +20,7 @@ extension Text {
         return self.font(Font(heavy))
     }
     
-    func bold(size: CGFloat = 12) -> Text {
+    func customBold(size: CGFloat = 12) -> Text {
         let bold = UIFont.systemFont(ofSize: size, weight: .bold, width: .condensed)
         
         return self.font(Font(bold))

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WifiCellularView: View {
+    var type: ProductCellularType
+    
     var body: some View {
         HStack {
             Image(.iconWifi)
@@ -17,6 +19,9 @@ struct WifiCellularView: View {
                 
                 Image(.icon5G)
             }
+            .frame(width: type == .wifiAndCellular ? 52 : 0,
+                   height: type == .wifiAndCellular ? 32 : 0)
+            .opacity(type == .wifiAndCellular ? 1 : 0)
         }
         .frame(maxWidth: .infinity, alignment: .center)
         .frame(height: 80)
@@ -25,5 +30,8 @@ struct WifiCellularView: View {
 }
 
 #Preview {
-    WifiCellularView()
+    VStack {
+        WifiCellularView(type: .wifiOnly)
+        WifiCellularView(type: .wifiAndCellular)
+    }
 }
