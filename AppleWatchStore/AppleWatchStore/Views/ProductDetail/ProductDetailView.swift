@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @Environment(ShoppingCart.self) var cart
+    
     @State var product: Product
     
     var body: some View {
