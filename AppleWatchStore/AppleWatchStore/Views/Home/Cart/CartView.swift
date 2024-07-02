@@ -17,10 +17,20 @@ struct CartView: View {
                 ForEach(cart.products) { product in
                     casrtItem(product: product)
                 }
+                .onDelete(perform: cart.remove(at:))
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
                 .background(Color.baseBackground)
+            }
+            .overlay {
+                if cart.products.isEmpty {
+                    ContentUnavailableView {
+                        Label("No Products", systemImage: "cart.fill")
+                    } description: {
+                        Text("Please add products to the cart")
+                    }
+                }
             }
             .safeAreaInset(edge: .bottom) {
                 cartTotals
