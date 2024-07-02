@@ -150,7 +150,7 @@ struct CartView: View {
                     
                     Spacer()
                     
-                    Text("€").bold() + Text("888,88").bold(size: 20)
+                    Text("€").ultraLight() + Text(String(format: "%.2f", cart.total)).customBold(size: 20)
                 }
                 
                 HStack {
@@ -159,7 +159,7 @@ struct CartView: View {
                     
                     Spacer()
                     
-                    Text("€").bold() + Text("888,88").bold(size: 20)
+                    Text("€").ultraLight() + Text(String(format: "%.2f", cart.getTax())).customBold(size: 20)
                 }
                 
                 Divider()
@@ -171,7 +171,12 @@ struct CartView: View {
                         
                         Spacer()
                         
-                        Text("€").ultraLight(size: 20) + Text("888,88").bold(size: 48)
+                        Text(String(format: "%.2f", cart.getOrderTotal()))
+                            .customBold(size: 48)
+                            .overlay(alignment: .topLeading) {
+                                Text("€").ultraLight(size: 20)
+                                    .offset(x: -10, y: 10)
+                            }
                     }
                 }
             }
@@ -183,4 +188,5 @@ struct CartView: View {
 
 #Preview {
     CartView()
+        .environment(ShoppingCart())
 }
