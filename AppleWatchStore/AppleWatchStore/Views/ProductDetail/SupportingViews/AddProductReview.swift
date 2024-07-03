@@ -24,12 +24,7 @@ struct AddProductReview: View {
                 Section {
                     TextEditor(text: $reviewSummary)
                     
-                    HStack {
-                        ForEach(0 ..< 5) { item in
-                            Image(systemName: "star")
-                                .symbolVariant(.fill)
-                        }
-                    }
+                    RatingReview(rating: $rating)
                 } header: {
                     Text("Write A Review")
                 }

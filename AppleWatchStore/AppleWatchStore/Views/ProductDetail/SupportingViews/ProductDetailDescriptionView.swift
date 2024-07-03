@@ -33,10 +33,13 @@ struct ProductDetailDescriptionView: View {
                     
                     Spacer()
                     
-                    Button(action: {}) {
+                    NavigationLink {
+                        AddProductReview()
+                    } label: {
                         Text("Add Review".uppercased())
                             .condensed(.light, size: 20)
                     }
+                    .buttonStyle(.plain)
                 }
                 .padding(.bottom, 4)
                 
