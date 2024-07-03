@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import PassKit
 
 struct CartView: View {
     @Environment(ShoppingCart.self) var cart
+    
+    let paymentRequest = PKPaymentRequest()
     
     var body: some View {
         
@@ -188,11 +191,23 @@ struct CartView: View {
                                     .offset(x: -10, y: 10)
                             }
                     }
+                    
+                    PayWithApplePayButton (
+                        .buy,
+                        request: paymentRequest,
+                        onPaymentAuthorizationChange: authorizationChange
+                    ) {}
+                    .frame(height: 52)
+                    .payWithApplePayButtonStyle(.black)
                 }
             }
             .padding()
         }
         .frame(height: 200)
+    }
+    
+    func authorizationChange(phase: PayWithApplePayButtonPaymentAuthorizationPhase) {
+        cart.pay()
     }
 }
 

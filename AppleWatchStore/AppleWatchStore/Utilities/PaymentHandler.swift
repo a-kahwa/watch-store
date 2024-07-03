@@ -63,7 +63,7 @@ class PaymentHandler: NSObject {
             paymentRequest.paymentSummaryItems = paymentSummaryItems
             paymentRequest.merchantIdentifier = "merchant.de.chapter.softwaremill.demos.applewatchstore"
             paymentRequest.merchantCapabilities = .threeDSecure
-            paymentRequest.couponCode = "DE"
+            paymentRequest.countryCode = "DE"
             paymentRequest.currencyCode = "EUR"
             paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
             paymentRequest.shippingType = .delivery

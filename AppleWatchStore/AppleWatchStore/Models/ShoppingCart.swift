@@ -18,6 +18,9 @@ class ShoppingCart: Identifiable {
     
     private (set) var products = [CartProduct]()
     
+    let paymentHandler = PaymentHandler()
+    var paymentSuccess = false
+    
     var total: Double {
         var amount: Double = 0
         
@@ -100,6 +103,19 @@ class ShoppingCart: Identifiable {
                 productItem.quantity += 1
                 
                 update(product: productItem)
+            }
+        }
+    }
+    
+    func pay() {
+        paymentHandler.startPayment(products: products, total: Int(total)) { success in
+            if success {
+                self.paymentSuccess = success
+                
+                self.products = []
+            }
+            else {
+                print("❌ payment failure ‼️")
             }
         }
     }
