@@ -20,6 +20,7 @@
 		8E13BD7C2C19ABA800FC1DF3 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */; };
 		8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */; };
 		8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */; };
+		8E3A8A9A2C35CB4E0097245C /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A8A992C35CB4E0097245C /* PaymentHandler.swift */; };
 		8E69E36A2C245DC90008B662 /* ProductDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3692C245DC90008B662 /* ProductDetailDescriptionView.swift */; };
 		8E69E36C2C246E450008B662 /* CaseSizesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E36B2C246E450008B662 /* CaseSizesView.swift */; };
 		8E69E36E2C246ED00008B662 /* SizeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E36D2C246ED00008B662 /* SizeItemView.swift */; };
@@ -92,6 +93,8 @@
 		8E13BD7B2C19ABA800FC1DF3 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Extension.swift"; sourceTree = "<group>"; };
 		8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSection.swift; sourceTree = "<group>"; };
+		8E3A8A982C35CAFC0097245C /* AppleWatchStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleWatchStore.entitlements; sourceTree = "<group>"; };
+		8E3A8A992C35CB4E0097245C /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		8E69E3692C245DC90008B662 /* ProductDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDescriptionView.swift; sourceTree = "<group>"; };
 		8E69E36B2C246E450008B662 /* CaseSizesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseSizesView.swift; sourceTree = "<group>"; };
 		8E69E36D2C246ED00008B662 /* SizeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeItemView.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 		8E13BD592C17643500FC1DF3 /* AppleWatchStore */ = {
 			isa = PBXGroup;
 			children = (
+				8E3A8A982C35CAFC0097245C /* AppleWatchStore.entitlements */,
 				8E69E3AE2C303C3A0008B662 /* Filter */,
 				8E69E39C2C2C39C60008B662 /* Models */,
 				8E69E37D2C25A09F0008B662 /* Networking */,
@@ -212,6 +216,7 @@
 				8E69E3AA2C2DE22F0008B662 /* ProductLayout.swift */,
 				8E69E3AC2C2DEADF0008B662 /* Sheet.swift */,
 				8E69E3BD2C3572120008B662 /* RatingReview.swift */,
+				8E3A8A992C35CB4E0097245C /* PaymentHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				8E69E38D2C25CFBE0008B662 /* WristSizeData.swift in Sources */,
 				8E89E6F62C208FFB008E9682 /* CategoryListItem.swift in Sources */,
 				8E69E3782C2480A80008B662 /* AppleCareView.swift in Sources */,
+				8E3A8A9A2C35CB4E0097245C /* PaymentHandler.swift in Sources */,
 				8E89E6FF2C209DB0008E9682 /* ProductsView.swift in Sources */,
 				8E89E70A2C21DDAB008E9682 /* ProductsGridView.swift in Sources */,
 				8E89E7102C230BE2008E9682 /* WideProductItem.swift in Sources */,
@@ -685,6 +691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleWatchStore/AppleWatchStore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatchStore/Preview Content\"";
@@ -714,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppleWatchStore/AppleWatchStore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleWatchStore/Preview Content\"";
