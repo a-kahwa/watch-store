@@ -23,20 +23,23 @@ struct ProductDetailDescriptionView: View {
                         .symbolVariant(.fill)
                         .foregroundStyle(.baseGold)
                     
-                    Text("5.0")
+                    Text(String(format: product.reviews.count > 0 ? "%.1f" : "0.0", product.ratingAverage))
                         .condensed(.bold, size: 24)
                     
                     Button(action: {}) {
-                        Text("888 Reviews")
+                        Text("^[\(product.reviews.count) Reviews](inflect: true)")
                             .condensed(.light, size: 20)
                     }
                     
                     Spacer()
                     
-                    Button(action: {}) {
+                    NavigationLink {
+                        AddProductReview(product: product)
+                    } label: {
                         Text("Add Review".uppercased())
                             .condensed(.light, size: 20)
                     }
+                    .buttonStyle(.plain)
                 }
                 .padding(.bottom, 4)
                 

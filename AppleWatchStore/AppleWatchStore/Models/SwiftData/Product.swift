@@ -34,6 +34,9 @@ final class Product {
     @Relationship(deleteRule: .cascade)
     var wristSizes: [WristSize]
     
+    @Relationship(deleteRule: .cascade)
+    var reviews: [Review] = []
+    
     init(product: ProductData) {
         self.id = UUID().uuidString
         self.isFeatured = product.isFeatured
@@ -81,8 +84,6 @@ extension Product {
         "\(materialDisplay) \(finishDisplay) Case with \(bandColorDisplay)"
     }
     
-    
-    
     var band: String {
         return "\(image)-l"
     }
@@ -105,5 +106,14 @@ extension Product {
     
     var finishType: ProductFinish {
         return ProductFinish(rawValue: self.finishTypeString) ?? .none
+    }
+    
+    var ratingAverage: Float {
+        let total = self.reviews
+            .map { $0.rating }
+            .reduce(0, +)
+        
+        return total / Float(self.reviews.count)
+        
     }
 }
