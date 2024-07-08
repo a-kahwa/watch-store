@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ProductDetailView: View {
     @Environment(ProductDetail.self) var productDetail
     @Environment(ShoppingCart.self) var cart
     
     @State var product: Product
+    
+    var favoriteTip = FavoriteProductTip()
     
     var body: some View {
         ZStack {
@@ -34,6 +37,14 @@ struct ProductDetailView: View {
                 .padding(.horizontal)
             }
         }
+        .task {
+            try? Tips.resetDatastore()
+            
+            try? Tips.configure([
+                .displayFrequency(.immediate),
+                .datastoreLocation(.applicationDefault)
+            ])
+        }
         .safeAreaInset(edge: .bottom) {
             ZStack {
                 addToCart
@@ -50,6 +61,21 @@ struct ProductDetailView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Constants.gradient)
                     .frame(height: 280.0 / 1.1)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        withAnimation {
+                            self.product.isFavorite.toggle()
+                        }
+                    }, label: {
+                        Constants.heart
+                            .symbolVariant(product.isFavorite ? .fill : .none)
+                            .font(.system(size: 24))
+                    })
+                    .buttonStyle(.plain)
+                    .popoverTip(FavoriteProductTip(), arrowEdge: .top)
+                }
             }
             
             ZStack {

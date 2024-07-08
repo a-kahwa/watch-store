@@ -21,6 +21,8 @@
 		8E13BD7E2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7D2C19AF2B00FC1DF3 /* ButtonStyle+Extension.swift */; };
 		8E13BD802C19B3CC00FC1DF3 /* BrowseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */; };
 		8E3A8A9A2C35CB4E0097245C /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A8A992C35CB4E0097245C /* PaymentHandler.swift */; };
+		8E3A8A9E2C3823600097245C /* FavoriteProductTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A8A9D2C3823600097245C /* FavoriteProductTip.swift */; };
+		8E3A8AA12C3C46230097245C /* ProductLayoutTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A8AA02C3C46230097245C /* ProductLayoutTip.swift */; };
 		8E69E36A2C245DC90008B662 /* ProductDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E3692C245DC90008B662 /* ProductDetailDescriptionView.swift */; };
 		8E69E36C2C246E450008B662 /* CaseSizesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E36B2C246E450008B662 /* CaseSizesView.swift */; };
 		8E69E36E2C246ED00008B662 /* SizeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E69E36D2C246ED00008B662 /* SizeItemView.swift */; };
@@ -95,6 +97,8 @@
 		8E13BD7F2C19B3CC00FC1DF3 /* BrowseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSection.swift; sourceTree = "<group>"; };
 		8E3A8A982C35CAFC0097245C /* AppleWatchStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleWatchStore.entitlements; sourceTree = "<group>"; };
 		8E3A8A992C35CB4E0097245C /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		8E3A8A9D2C3823600097245C /* FavoriteProductTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProductTip.swift; sourceTree = "<group>"; };
+		8E3A8AA02C3C46230097245C /* ProductLayoutTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLayoutTip.swift; sourceTree = "<group>"; };
 		8E69E3692C245DC90008B662 /* ProductDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDescriptionView.swift; sourceTree = "<group>"; };
 		8E69E36B2C246E450008B662 /* CaseSizesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseSizesView.swift; sourceTree = "<group>"; };
 		8E69E36D2C246ED00008B662 /* SizeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeItemView.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		8E13BD592C17643500FC1DF3 /* AppleWatchStore */ = {
 			isa = PBXGroup;
 			children = (
+				8E3A8A9B2C3822C00097245C /* Tips */,
 				8E3A8A982C35CAFC0097245C /* AppleWatchStore.entitlements */,
 				8E69E3AE2C303C3A0008B662 /* Filter */,
 				8E69E39C2C2C39C60008B662 /* Models */,
@@ -264,6 +269,31 @@
 				8E89E6F72C20929E008E9682 /* CategorySection.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		8E3A8A9B2C3822C00097245C /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A8A9F2C3C45F50097245C /* Products */,
+				8E3A8A9C2C3823170097245C /* Favorites */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		8E3A8A9C2C3823170097245C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A8A9D2C3823600097245C /* FavoriteProductTip.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		8E3A8A9F2C3C45F50097245C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A8AA02C3C46230097245C /* ProductLayoutTip.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		8E69E37D2C25A09F0008B662 /* Networking */ = {
@@ -556,11 +586,13 @@
 				8E69E3B22C31937F0008B662 /* FilterStrategy.swift in Sources */,
 				8E69E3912C25D5E70008B662 /* ProductData.swift in Sources */,
 				8E89E7082C20A024008E9682 /* Theme.swift in Sources */,
+				8E3A8AA12C3C46230097245C /* ProductLayoutTip.swift in Sources */,
 				8E69E3AD2C2DEADF0008B662 /* Sheet.swift in Sources */,
 				8E69E3992C29C4690008B662 /* ProductFilterService.swift in Sources */,
 				8E69E3AB2C2DE22F0008B662 /* ProductLayout.swift in Sources */,
 				8E13BD5B2C17643500FC1DF3 /* AppleWatchStoreApp.swift in Sources */,
 				8E89E7032C209E1C008E9682 /* FavoritesView.swift in Sources */,
+				8E3A8A9E2C3823600097245C /* FavoriteProductTip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
