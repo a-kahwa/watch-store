@@ -15,6 +15,7 @@ struct ProductLayoutTip: Tip {
     
     var message: Text {
         Text("You can choose to switch layouts by toggling the button")
+            .foregroundStyle(.primary)
     }
     
     var image: Image? {

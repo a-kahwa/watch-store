@@ -17,6 +17,7 @@ struct ProductFilterTip: Tip {
     
     public var message: Text {
         Text("You can filter for those products that interest you on this page.")
+            .foregroundStyle(.primary)
     }
     
     public var image: Image? {
