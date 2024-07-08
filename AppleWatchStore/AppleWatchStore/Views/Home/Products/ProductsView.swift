@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ProductsView: View {
+    @Environment(ProductsFilter.self) private var filter
     @State private var layout = ProductLayout.list
     @State private var sheet: Sheet.SheetType?
+    
+    private var layoutTip = ProductLayoutTip()
+    private var filterTip = ProductFilterTip()
             
     var body: some View {
         NavigationStack {
+            TipView(layoutTip, 
+                    action: actionHandler)
+            .padding(.horizontal)
+            
             content
                 .navigationTitle("Apple Watches")
                 .navigationBarTitleDisplayMode(.large)
@@ -31,6 +40,16 @@ struct ProductsView: View {
             }
         }
     }
+    
+    func actionHandler(action: Tip.Action) {
+        if action.id == "next-action" {
+            Task {
+                layoutTip.invalidate(reason: .tipClosed)
+                
+                await ProductFilterTip.productSteps.donate()
+            }
+        }
+    }
 }
 
 extension ProductsView {
@@ -44,6 +63,13 @@ extension ProductsView {
             })
             .buttonStyle(.plain)
             .fontWeight(.semibold)
+            .popoverTip(
+                filterTip,
+                arrowEdge: .top) { action in
+                    if action.id == "action.title.dismiss" {
+                        filterTip.invalidate(reason: .tipClosed)
+                    }
+                }
         }
         
         ToolbarItem(placement: .topBarTrailing) {
